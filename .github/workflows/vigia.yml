@@ -3,7 +3,6 @@ name: vigia
 on:
   schedule:
     - cron: "0 10,22 * * *"   # 07:00 e 19:00 de Brasília (o GitHub pode atrasar alguns minutos)
-    - cron: "23 3 * * *"   # TESTE de rodada agendada (30/09/2026) — remover depois
   workflow_dispatch: {}          # botão "Run workflow" na aba Actions
   push:
     paths: ["vigia.py", ".github/workflows/vigia.yml"]
