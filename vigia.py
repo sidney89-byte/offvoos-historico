@@ -42,7 +42,7 @@ def texto(fragmento):
 
 def voos_do_dia(dia):
     pagina = baixar(f"{BASE}/voos?d={dia.isoformat()}")
-    if 'class="flight-row"' not in pagina and "flight" not in pagina:
+    if 'class="date-nav"' not in pagina:  # só existe na página real; a do Cloudflare não tem
         raise RuntimeError("página sem a tabela de voos (bloqueio do Cloudflare?)")
     voos = []
     for m in re.finditer(r'<tr class="flight-row"(.*?)</tr>', pagina, re.S):
