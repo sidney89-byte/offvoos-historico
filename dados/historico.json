@@ -12226,7 +12226,7 @@
   ]
  },
  "2026-09-28": {
-  "coletado_em": "2026-09-30T00:12-03:00",
+  "coletado_em": "2026-09-30T01:44-03:00",
   "voos": [
    {
     "id": "34394ae6-6033-4826-ae43-4998fa4ef5dc",
@@ -14079,7 +14079,7 @@
   ]
  },
  "2026-09-29": {
-  "coletado_em": "2026-09-30T00:12-03:00",
+  "coletado_em": "2026-09-30T01:44-03:00",
   "voos": [
    {
     "id": "479a8f50-dfc9-415c-a18a-f80bf4df5b80",
@@ -16076,7 +16076,7 @@
   ]
  },
  "2026-09-30": {
-  "coletado_em": "2026-09-30T00:12-03:00",
+  "coletado_em": "2026-09-30T01:44-03:00",
   "voos": [
    {
     "id": "38da2d34-6690-4eb1-b50c-9fe31efd12ec",
@@ -17373,11 +17373,215 @@
     "destinos": "UMLI",
     "aeronave": "PR-JBI S-92A",
     "empresa": "Líder"
+   },
+   {
+    "id": "3d9b6a98-9362-4dd0-82ab-ca8968f81a68",
+    "numero": "509581638",
+    "data": "2026-09-30",
+    "programado": "12:30",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "P-31",
+    "aeronave": "PR-JHI AW139",
+    "empresa": "Líder"
+   },
+   {
+    "id": "2e0c5e1c-040f-4fcf-9716-527f1dad38c9",
+    "numero": "509581876",
+    "data": "2026-09-30",
+    "programado": "12:30",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Jacarepaguá",
+    "destinos": "SAES",
+    "aeronave": "PR-OOA AW139",
+    "empresa": "Omni"
+   },
+   {
+    "id": "d506cba4-08ca-4486-a724-5fbfe01a5d34",
+    "numero": "509581887",
+    "data": "2026-09-30",
+    "programado": "12:30",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Cabo Frio",
+    "destinos": "UMCP",
+    "aeronave": "PR-BGU S-92A",
+    "empresa": "CHC"
+   },
+   {
+    "id": "e9453190-d097-491e-a0e5-6bbd544d558f",
+    "numero": "509581675",
+    "data": "2026-09-30",
+    "programado": "12:35",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "P-38",
+    "aeronave": "PR-JHD AW139",
+    "empresa": "Líder"
+   },
+   {
+    "id": "5d69c593-e886-495d-adfd-c73a38d82bfd",
+    "numero": "509580874",
+    "data": "2026-09-30",
+    "programado": "12:40",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "P-48",
+    "aeronave": "PR-JBP S-92A",
+    "empresa": "Líder"
+   },
+   {
+    "id": "21934fbd-28f9-4b08-ab87-e256a982ff52",
+    "numero": "509581626",
+    "data": "2026-09-30",
+    "programado": "12:40",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Macaé",
+    "destinos": "PNA2",
+    "aeronave": "PR-CGS AW139",
+    "empresa": "CHC"
+   },
+   {
+    "id": "bd7b1183-bf69-4e69-815f-c9828e6cd762",
+    "numero": "509581676",
+    "data": "2026-09-30",
+    "programado": "12:45",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "UMPC",
+    "aeronave": "PR-OOQ H175",
+    "empresa": "Omni"
+   },
+   {
+    "id": "f95eaa58-da31-470f-8e56-c59d3ae31072",
+    "numero": "509581634",
+    "data": "2026-09-30",
+    "programado": "12:50",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Vitória",
+    "destinos": "FPMQ",
+    "aeronave": "PR-OTX AW139",
+    "empresa": "Omni"
+   },
+   {
+    "id": "5c590e59-ace8-40f9-aae9-d2a5153aaffd",
+    "numero": "509581636",
+    "data": "2026-09-30",
+    "programado": "13:00",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Macaé",
+    "destinos": "PGP1",
+    "aeronave": "PR-CGD S-92A",
+    "empresa": "CHC"
+   },
+   {
+    "id": "560be598-abe3-4470-827f-d571cb12b353",
+    "numero": "509581682",
+    "data": "2026-09-30",
+    "programado": "13:00",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "UMVV",
+    "aeronave": "PR-CPV S-92A",
+    "empresa": "CHC"
+   },
+   {
+    "id": "b4a6f734-2646-4da9-b022-913976bb7346",
+    "numero": "509581627",
+    "data": "2026-09-30",
+    "programado": "13:05",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Macaé",
+    "destinos": "NS41 / NS60",
+    "aeronave": "PS-BTO AW139",
+    "empresa": "Bristow"
+   },
+   {
+    "id": "24e666bd-4f16-4ca5-aadd-69bb7a0dc430",
+    "numero": "509581703",
+    "data": "2026-09-30",
+    "programado": "13:05",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "P-56 / P-38",
+    "aeronave": "PS-BTF AW139",
+    "empresa": "Bristow"
+   },
+   {
+    "id": "ada5bd9e-e2b5-4cdd-99e8-2d8806f69008",
+    "numero": "509581648",
+    "data": "2026-09-30",
+    "programado": "13:10",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "P-18",
+    "aeronave": "PR-JKM S-92A",
+    "empresa": "Líder"
+   },
+   {
+    "id": "362c8c0e-bcb6-42c4-88d9-f242826131c8",
+    "numero": "509581687",
+    "data": "2026-09-30",
+    "programado": "13:10",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Macaé",
+    "destinos": "SKOL",
+    "aeronave": "PS-CDT AW139",
+    "empresa": "CHC"
+   },
+   {
+    "id": "cef81e40-2d6e-4553-b388-7a11302e2a51",
+    "numero": "509581683",
+    "data": "2026-09-30",
+    "programado": "13:20",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "NS32",
+    "aeronave": "PR-JHE AW139",
+    "empresa": "Líder"
+   },
+   {
+    "id": "0d8fb3df-133c-450d-8290-3e361be8f9db",
+    "numero": "509581679",
+    "data": "2026-09-30",
+    "programado": "13:25",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "NS44 / UMVV",
+    "aeronave": "PR-CCG S-92A",
+    "empresa": "CHC"
+   },
+   {
+    "id": "cdd354a6-db5e-4415-ae04-d992cf3272f0",
+    "numero": "509581855",
+    "data": "2026-09-30",
+    "programado": "13:30",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Macaé",
+    "destinos": "SKNT",
+    "aeronave": "PS-BTP AW139",
+    "empresa": "Bristow"
    }
   ]
  },
  "2026-10-01": {
-  "coletado_em": "2026-09-30T00:12-03:00",
+  "coletado_em": "2026-09-30T01:44-03:00",
   "voos": []
  }
 }
