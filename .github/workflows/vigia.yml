@@ -1,0 +1,32 @@
+name: vigia
+
+on:
+  schedule:
+    - cron: "0 10,22 * * *"   # 07:00 e 19:00 de Brasília (o GitHub pode atrasar alguns minutos)
+  workflow_dispatch: {}          # botão "Run workflow" na aba Actions
+  push:
+    paths: ["vigia.py", ".github/workflows/vigia.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vigia
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Coletar voos
+        run: python3 vigia.py
+      - name: Guardar no repositório
+        run: |
+          git config user.name "vigia"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dados/
+          if git diff --cached --quiet; then echo "nada novo"; exit 0; fi
+          git commit -m "voos $(TZ=America/Sao_Paulo date '+%d/%m/%Y %H:%M')"
+          git push
