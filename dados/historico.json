@@ -12226,7 +12226,7 @@
   ]
  },
  "2026-09-28": {
-  "coletado_em": "2026-09-30T08:23-03:00",
+  "coletado_em": "2026-09-30T08:35-03:00",
   "voos": [
    {
     "id": "34394ae6-6033-4826-ae43-4998fa4ef5dc",
@@ -14079,7 +14079,7 @@
   ]
  },
  "2026-09-29": {
-  "coletado_em": "2026-09-30T08:23-03:00",
+  "coletado_em": "2026-09-30T08:35-03:00",
   "voos": [
    {
     "id": "479a8f50-dfc9-415c-a18a-f80bf4df5b80",
@@ -16076,7 +16076,7 @@
   ]
  },
  "2026-09-30": {
-  "coletado_em": "2026-09-30T08:23-03:00",
+  "coletado_em": "2026-09-30T08:35-03:00",
   "voos": [
    {
     "id": "38da2d34-6690-4eb1-b50c-9fe31efd12ec",
@@ -16156,7 +16156,7 @@
     "data": "2026-09-30",
     "programado": "06:35",
     "decolagem": "06:35",
-    "status": "Decolagem",
+    "status": "Pouso",
     "origem": "Maricá",
     "destinos": "UMPT",
     "aeronave": "PR-OOC AW139",
@@ -16348,7 +16348,7 @@
     "data": "2026-09-30",
     "programado": "06:55",
     "decolagem": "06:46",
-    "status": "Decolagem",
+    "status": "Transferido",
     "origem": "Cabo Frio",
     "destinos": "UMPA",
     "aeronave": "PR-CGF S-92A",
@@ -16372,7 +16372,7 @@
     "data": "2026-09-30",
     "programado": "07:00",
     "decolagem": "06:59",
-    "status": "Decolagem",
+    "status": "Pouso",
     "origem": "Vitória",
     "destinos": "NS52 / P-58",
     "aeronave": "PR-OTX AW139",
@@ -16396,7 +16396,7 @@
     "data": "2026-09-30",
     "programado": "07:00",
     "decolagem": "06:47",
-    "status": "Decolagem",
+    "status": "Pouso",
     "origem": "Cabo Frio",
     "destinos": "FPGU",
     "aeronave": "PR-OOT AW139",
@@ -16456,11 +16456,11 @@
     "data": "2026-09-30",
     "programado": "07:05",
     "decolagem": "",
-    "status": "Atrasado",
+    "status": "Check In Aberto",
     "origem": "Maricá",
     "destinos": "P-78",
-    "aeronave": "PR-BGB S-92A",
-    "empresa": "Omni"
+    "aeronave": "PR-CGE S-92A",
+    "empresa": "CHC"
    },
    {
     "id": "d6631c9f-6dff-4cbc-a4e1-49ba85a3dabe",
@@ -16648,7 +16648,7 @@
     "data": "2026-09-30",
     "programado": "07:30",
     "decolagem": "",
-    "status": "Atrasado",
+    "status": "Decolagem",
     "origem": "Jacarepaguá",
     "destinos": "UMPA",
     "aeronave": "PR-OHL AW139",
@@ -16732,7 +16732,7 @@
     "data": "2026-09-30",
     "programado": "08:55",
     "decolagem": "",
-    "status": "Check In Aberto",
+    "status": "Check In Concluído",
     "origem": "São Tomé",
     "destinos": "NS31",
     "aeronave": "PS-BTC AW139",
@@ -16744,7 +16744,7 @@
     "data": "2026-09-30",
     "programado": "09:05",
     "decolagem": "",
-    "status": "Check In Aberto",
+    "status": "Check In Concluído",
     "origem": "Aracaju",
     "destinos": "PA39",
     "aeronave": "PR-AIE H145",
@@ -16780,7 +16780,7 @@
     "data": "2026-09-30",
     "programado": "09:15",
     "decolagem": "",
-    "status": "Check In Aberto",
+    "status": "Check In Concluído",
     "origem": "Macaé",
     "destinos": "SS92",
     "aeronave": "PR-CGS AW139",
@@ -16828,7 +16828,7 @@
     "data": "2026-09-30",
     "programado": "09:35",
     "decolagem": "",
-    "status": "Previsto",
+    "status": "Check In Aberto",
     "origem": "São Tomé",
     "destinos": "P-47",
     "aeronave": "PR-JHD AW139",
@@ -16864,7 +16864,7 @@
     "data": "2026-09-30",
     "programado": "09:40",
     "decolagem": "",
-    "status": "Previsto",
+    "status": "Check In Aberto",
     "origem": "Cabo Frio",
     "destinos": "SATO / SKVI",
     "aeronave": "PR-CGT AW139",
@@ -16960,7 +16960,7 @@
     "data": "2026-09-30",
     "programado": "10:00",
     "decolagem": "",
-    "status": "Previsto",
+    "status": "Check In Aberto",
     "origem": "Maricá",
     "destinos": "FPAB",
     "aeronave": "PR-OHN AW139",
@@ -17008,7 +17008,7 @@
     "data": "2026-09-30",
     "programado": "10:05",
     "decolagem": "",
-    "status": "Previsto",
+    "status": "Check In Aberto",
     "origem": "Maricá",
     "destinos": "NS59",
     "aeronave": "PR-CHT S-92A",
@@ -17020,7 +17020,7 @@
     "data": "2026-09-30",
     "programado": "10:05",
     "decolagem": "",
-    "status": "Previsto",
+    "status": "Check In Aberto",
     "origem": "Cabo Frio",
     "destinos": "SESU",
     "aeronave": "PR-BGZ AW139",
@@ -18025,7 +18025,7 @@
   ]
  },
  "2026-10-01": {
-  "coletado_em": "2026-09-30T08:23-03:00",
+  "coletado_em": "2026-09-30T08:35-03:00",
   "voos": []
  }
 }
