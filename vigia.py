@@ -74,12 +74,13 @@ def main():
     hist = json.loads(HISTORICO.read_text()) if HISTORICO.exists() else {}
     hoje = dt.datetime.now(BRT).date()
     agora = dt.datetime.now(BRT).isoformat(timespec="minutes")
-    falhas = 0
+    falhas = tentativas = 0
     for i in range(-1, DIAS_NO_SITE + 1):  # amanhã até 8 dias atrás
         dia = hoje - dt.timedelta(days=i)
         chave = dia.isoformat()
         if chave in hist and i > 2 and hist[chave]["voos"]:
             continue  # dia fechado e já guardado
+        tentativas += 1
         try:
             voos = voos_do_dia(dia)
         except Exception as e:
@@ -92,8 +93,11 @@ def main():
         hist[chave] = {"coletado_em": agora, "voos": voos}
         print(f"{chave}: {len(voos)} voos")
         time.sleep(1)
-    if falhas >= DIAS_NO_SITE:
-        sys.exit("todas as buscas falharam — o site pode estar bloqueando o GitHub")
+    # Todas as buscas desta rodada falharam (bloqueio, site fora do ar): para com erro ANTES de
+    # gravar, para a rodada ficar vermelha e o GitHub avisar por e-mail. Antes a regra exigia 8
+    # falhas, mas uma rodada normal só busca ~4 dias — um bloqueio passaria verde e calado.
+    if tentativas and falhas == tentativas:
+        sys.exit(f"todas as {tentativas} buscas falharam — o site pode estar bloqueando o GitHub")
 
     limite = (hoje - dt.timedelta(days=DIAS_GUARDAR)).isoformat()
     hist = {k: v for k, v in sorted(hist.items()) if k >= limite}
