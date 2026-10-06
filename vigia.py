@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Vigia de voos offshore: guarda os últimos 60 dias do offvoos.com.br (todas as unidades).
+"""Vigia de voos offshore: guarda TODO o histórico do offvoos.com.br (todas as unidades), sem prazo.
 
 O offvoos só guarda ~1 semana — para data mais antiga ele devolve os voos de outro dia.
 Este vigia roda 2x por dia no GitHub Actions, busca os dias que o site ainda tem e acumula:
-  dados/historico.json  — um registro por dia (fonte da verdade)
-  dados/voos_60d.csv    — tabela plana dos últimos 60 dias, lida pelo Power Query do Excel
+  dados/arquivo/AAAA-MM.csv — arquivo permanente, um por mês; nunca é apagado
+  dados/historico.json      — últimos 60 dias, um registro por dia (área de trabalho)
+  dados/voos_60d.csv        — tabela plana dos últimos 60 dias, lida pelo Power Query e pelo app
 Só usa a biblioteca padrão do Python.
 """
 import csv
@@ -23,8 +24,9 @@ UA = "Mozilla/5.0 (compatible; offvoos-historico/1.0; +https://github.com/sidney
 DADOS = Path(__file__).resolve().parent / "dados"
 HISTORICO = DADOS / "historico.json"
 CSV = DADOS / "voos_60d.csv"
+ARQUIVO = DADOS / "arquivo"
 DIAS_NO_SITE = 8      # o site só devolve ~1 semana; mais antigo que isso não adianta pedir
-DIAS_GUARDAR = 60
+DIAS_GUARDAR = 60     # só a área de trabalho e o CSV do Excel; o arquivo mensal guarda tudo
 BRT = ZoneInfo("America/Sao_Paulo")
 COLUNAS = ["data", "numero", "programado", "decolagem", "status", "origem", "destinos",
            "aeronave", "empresa", "id"]
@@ -70,6 +72,27 @@ def voos_do_dia(dia):
     return voos
 
 
+def arquivar(hist):
+    """Grava os dias de hist no arquivo do mês. Dias que já saíram da janela de 60 dias
+    continuam no arquivo: só se substituem os dias que hist tem."""
+    ARQUIVO.mkdir(parents=True, exist_ok=True)
+    por_mes = {}
+    for dia, reg in hist.items():
+        por_mes.setdefault(dia[:7], {})[dia] = reg["voos"]
+    for mes, dias in por_mes.items():
+        arq = ARQUIVO / f"{mes}.csv"
+        linhas = []
+        if arq.exists():
+            with arq.open(newline="", encoding="utf-8") as f:
+                linhas = [r for r in csv.DictReader(f) if r["data"] not in dias]
+        linhas += [v for voos in dias.values() for v in voos]
+        linhas.sort(key=lambda v: (v["data"], v["programado"], v["numero"]))
+        with arq.open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=COLUNAS, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(linhas)
+
+
 def main():
     hist = json.loads(HISTORICO.read_text()) if HISTORICO.exists() else {}
     hoje = dt.datetime.now(BRT).date()
@@ -99,6 +122,8 @@ def main():
     if tentativas and falhas == tentativas:
         sys.exit(f"todas as {tentativas} buscas falharam — o site pode estar bloqueando o GitHub")
 
+    # arquiva ANTES de cortar a janela: o que sai dos 60 dias já está no arquivo do mês
+    arquivar(hist)
     limite = (hoje - dt.timedelta(days=DIAS_GUARDAR)).isoformat()
     hist = {k: v for k, v in sorted(hist.items()) if k >= limite}
     DADOS.mkdir(exist_ok=True)
