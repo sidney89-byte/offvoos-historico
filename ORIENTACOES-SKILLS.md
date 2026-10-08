@@ -21,6 +21,17 @@ Medimos depois: com critério fechado e revisor independente, nenhum ciclo passo
 Mas a skill sozinha não mudou o hábito do executor — o que funcionou foi tornar o erro difícil de
 escrever (tabela com referência por linha, plano antes do código, teste que reprova).
 
+## O que a revisão não pega: o erro que só aparece no uso real
+
+Reprovação em série tem cura (critério fechado, revisor com casos próprios). Mas lote APROVADO ainda
+quebrava no uso. Caso medido em 07/10/2026: um lote corrigiu "carnê salvo sem parcelas", passou na
+revisão e em 3.528 testes — e o carnê continuava sem parcelas. A causa estava na CAMADA VIZINHA (o
+servidor de leitura devolvia a lista vazia), que nenhum teste de unidade nem revisor de código vê.
+Só apareceu ao percorrer o caminho de verdade: documento fiel → servidor real → app → banco → tela.
+
+Teste e revisão provam que o código faz o que o autor pensou; só o caminho real prova que o
+problema da pessoa sumiu.
+
 ## As skills
 
 | Skill | Quando usar |
@@ -45,6 +56,18 @@ alteração. A primeira é nossa.
 6. **Executor → revisor só com critério fechado** (entrada → resultado, fora do escopo, padrão seguro);
    o revisor testa com casos próprios.
 7. **Plano antes do código; verificação antes de dizer pronto.**
+8. **Caminho real antes de "pronto".** Todo conserto ou recurso que atravessa camadas (app ↔ servidor
+   ↔ banco ↔ serviço externo) é exercido de ponta a ponta pelo menos uma vez, com dado fiel ao real
+   (fictício, nunca dado pessoal) e com a camada vizinha DE VERDADE (não dublê), conferindo o
+   resultado onde a pessoa o vê e onde ele é gravado. O brief diz qual caminho, com qual documento,
+   e quem o percorre. Sem isso, o defeito está "aprovado", não "resolvido".
+
+## Ajuste ao `test-driven-development`
+
+A skill vem do Superpowers sem alteração e é rígida ("apague o código escrito antes do teste").
+Aqui ela vale assim: teste primeiro para a regra NOVA ou para o defeito (o teste tem de falhar sem o
+conserto); código existente que já tem teste não é apagado; num lote com brief, o critério e o teto
+do brief mandam. Teste de unidade não substitui a regra 8.
 
 Para atualizar as skills do Superpowers: copiar de novo de https://github.com/obra/superpowers e
 registrar a versão aqui.

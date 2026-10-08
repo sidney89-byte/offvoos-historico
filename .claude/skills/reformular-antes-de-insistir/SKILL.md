@@ -51,6 +51,13 @@ Responda por escrito: (a) que decisão a pessoa toma? (b) onde a resposta já ex
 Se o conserto é "mais uma regex/palavra/formato", o desenho está errado: volte às perguntas.
 Se o mesmo tema voltar por outro caminho, pare e reformule com o usuário.
 
+## Pronto é no uso real
+
+Aprovado pelo revisor não é resolvido. Se o conserto atravessa camadas, percorra o caminho real uma
+vez (dado fiel, camada vizinha de verdade, confira na tela e no que foi gravado) antes de dizer
+pronto. Em 07/10/2026 um lote aprovado com 3.528 testes verdes não resolveu nada: a causa era o
+servidor. Ver regra 8 do `ORIENTACOES-SKILLS.md`.
+
 ## O que fazer com o trabalho já feito
 
 Guarde o útil (a categoria antiga vira detalhe em "Ver detalhes"), mas tire dele o poder de decidir
