@@ -2,7 +2,7 @@
 """Vigia de voos offshore: guarda TODO o histórico do offvoos.com.br (todas as unidades), sem prazo.
 
 O offvoos só guarda ~1 semana — para data mais antiga ele devolve os voos de outro dia.
-Este vigia roda 2x por dia no GitHub Actions, busca os dias que o site ainda tem e acumula:
+Este vigia roda a cada 30 min, das 06:00 às 18:00 (Brasília), no GitHub Actions, busca os dias que o site ainda tem e acumula:
   dados/arquivo/AAAA-MM.csv — arquivo permanente, um por mês; nunca é apagado
   dados/historico.json      — últimos 60 dias, um registro por dia (área de trabalho)
   dados/voos_60d.csv        — tabela plana dos últimos 60 dias, lida pelo Power Query e pelo app
@@ -113,6 +113,8 @@ def main():
         if not voos and hist.get(chave, {}).get("voos"):
             print(f"{chave}: site sem dados; mantido o histórico")
             continue
+        if hist.get(chave, {}).get("voos") == voos:
+            continue  # nada mudou: não regrava (sem commit a cada 30 min só pela hora da coleta)
         hist[chave] = {"coletado_em": agora, "voos": voos}
         print(f"{chave}: {len(voos)} voos")
         time.sleep(1)
