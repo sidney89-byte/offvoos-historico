@@ -108466,7 +108466,7 @@
   ]
  },
  "2026-11-15": {
-  "coletado_em": "2026-11-14T21:00-03:00",
+  "coletado_em": "2026-11-14T21:30-03:00",
   "voos": [
    {
     "id": "ff92557c-19f0-490b-b864-71f79b77fca1",
@@ -109019,6 +109019,78 @@
     "destinos": "PGP1",
     "aeronave": "PS-MSV S-92A",
     "empresa": "CHC"
+   },
+   {
+    "id": "bab6024b-63b6-4ec3-8f46-918d3ac7ec74",
+    "numero": "509605900",
+    "data": "2026-11-15",
+    "programado": "08:55",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "P-25",
+    "aeronave": "PR-JBP S-92A",
+    "empresa": "Líder"
+   },
+   {
+    "id": "7dfc7e22-0f2f-476e-9142-b1f5d19887a8",
+    "numero": "509605193",
+    "data": "2026-11-15",
+    "programado": "09:10",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Oiapoque",
+    "destinos": "NS42",
+    "aeronave": "PR-OOX AW189",
+    "empresa": "Omni"
+   },
+   {
+    "id": "3809b599-82cd-4c6b-accc-38225c7bb850",
+    "numero": "509605698",
+    "data": "2026-11-15",
+    "programado": "09:10",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Jacarepaguá",
+    "destinos": "P-69",
+    "aeronave": "PR-OTY AW189",
+    "empresa": "Omni"
+   },
+   {
+    "id": "b5a5d1d3-c80a-4909-95ba-c1c2d5002310",
+    "numero": "509606061",
+    "data": "2026-11-15",
+    "programado": "09:10",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "UMMA",
+    "aeronave": "PR-JHE AW139",
+    "empresa": "Líder"
+   },
+   {
+    "id": "a161eb3c-3399-4ab9-9052-0ab2a2ce7d09",
+    "numero": "509605742",
+    "data": "2026-11-15",
+    "programado": "09:15",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Vitória",
+    "destinos": "NS31",
+    "aeronave": "PR-OHB AW139",
+    "empresa": "Omni"
+   },
+   {
+    "id": "fab6dea1-6507-4691-81c9-ce07400614ea",
+    "numero": "509605910",
+    "data": "2026-11-15",
+    "programado": "09:15",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "UMPC",
+    "aeronave": "PR-OTP H175",
+    "empresa": "Omni"
    }
   ]
  }
