@@ -110247,7 +110247,7 @@
   ]
  },
  "2026-11-16": {
-  "coletado_em": "2026-11-16T23:33-03:00",
+  "coletado_em": "2026-11-17T00:18-03:00",
   "voos": [
    {
     "id": "c1c83ec2-09e0-461e-971c-eed7613e4603",
@@ -111907,7 +111907,7 @@
    },
    {
     "id": "0018edc2-7784-4018-87d1-4c405105686e",
-    "numero": "509606362 🆕",
+    "numero": "509606362",
     "data": "2026-11-16",
     "programado": "17:30",
     "decolagem": "",
@@ -111920,7 +111920,7 @@
   ]
  },
  "2026-11-17": {
-  "coletado_em": "2026-11-16T23:33-03:00",
+  "coletado_em": "2026-11-17T00:18-03:00",
   "voos": [
    {
     "id": "f30fc003-6a4e-4d20-8442-2e0eb9c2728d",
@@ -112818,7 +112818,7 @@
     "decolagem": "",
     "status": "Previsto",
     "origem": "Macaé",
-    "destinos": "SKOL / SKRE",
+    "destinos": "SKOL",
     "aeronave": "PS-CDT AW139",
     "empresa": "CHC"
    },
@@ -112881,18 +112881,6 @@
     "destinos": "SAJA",
     "aeronave": "PR-CGS AW139",
     "empresa": "CHC"
-   },
-   {
-    "id": "b482947a-0d10-4603-ad02-10f61f14ae91",
-    "numero": "509606772",
-    "data": "2026-11-17",
-    "programado": "10:05",
-    "decolagem": "",
-    "status": "Previsto",
-    "origem": "Macaé",
-    "destinos": "SAES",
-    "aeronave": "PS-CDV AW139",
-    "empresa": ""
    },
    {
     "id": "17fbbe8f-97ed-4422-a227-4a76ff478b38",
@@ -113157,7 +113145,23 @@
     "destinos": "SBMQ / SBOI / SBMQ",
     "aeronave": "PR-YXC ATR-72-600",
     "empresa": "Azul"
+   },
+   {
+    "id": "a0bd919b-c9b8-40f3-ab92-4a96d0231d7e",
+    "numero": "509606556",
+    "data": "2026-11-17",
+    "programado": "11:30",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "UMPC",
+    "aeronave": "PR-JKM S-92A",
+    "empresa": "Líder"
    }
   ]
+ },
+ "2026-11-18": {
+  "coletado_em": "2026-11-17T00:18-03:00",
+  "voos": []
  }
 }
