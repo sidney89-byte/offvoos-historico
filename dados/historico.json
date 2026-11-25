@@ -118476,7 +118476,7 @@
   ]
  },
  "2026-11-25": {
-  "coletado_em": "2026-11-25T00:16-03:00",
+  "coletado_em": "2026-11-25T00:52-03:00",
   "voos": [
    {
     "id": "76422878-bb44-4be4-90ef-6968d306d965",
@@ -119713,6 +119713,30 @@
     "destinos": "UMLI",
     "aeronave": "PR-JHI AW139",
     "empresa": "Líder"
+   },
+   {
+    "id": "e9b8f570-2250-4c7e-96ad-924537c1ca01",
+    "numero": "509611753",
+    "data": "2026-11-25",
+    "programado": "12:30",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "São Tomé",
+    "destinos": "P-31",
+    "aeronave": "PS-BTC AW139",
+    "empresa": "Bristow"
+   },
+   {
+    "id": "a77718ad-8fa4-47eb-9ba7-9bce2ec57042",
+    "numero": "509611822",
+    "data": "2026-11-25",
+    "programado": "12:30",
+    "decolagem": "",
+    "status": "Previsto",
+    "origem": "Cabo Frio",
+    "destinos": "P-68",
+    "aeronave": "PR-CGD S-92A",
+    "empresa": "CHC"
    }
   ]
  },
